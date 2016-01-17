@@ -1,0 +1,65 @@
+ext {
+
+    android = [compileSdkVersion: 23,
+               buildToolsVersion: "23.0.1",
+               applicationId    : "me.drakeet.lunei",
+               minSdkVersion    : 14,
+               targetSdkVersion : 22,
+               versionCode      : 100,
+               versionName      : "0.99"]
+
+    dependencies = ["labelview"               : "me.drakeet.labelview:labelview:0.8",
+                    "androiduiview"           : "me.drakeet.library:androiduiview:1.1.2",
+
+                    "guava"                   : "com.google.guava:guava:18.0",
+
+                    "appcompat-v7"            : "com.android.support:appcompat-v7:23.1.0",
+                    "design"                  : "com.android.support:design:23.1.0",
+                    "appcompat-v4"            : "com.android.support:support-v4:23.1.0",
+                    "recyclerview-v7"         : "com.android.support:recyclerview-v7:23.1.0",
+                    "palette-v7"              : "com.android.support:palette-v7:23.1.0",
+                    "gson"                    : "com.google.code.gson:gson:2.4",
+
+                    "photoview"               : "com.github.chrisbanes.photoview:library:1.2.3",
+                    "numberprogressbar"       : "com.daimajia.numberprogressbar:library:1.2@aar",
+                    "retrofit"                : "com.squareup.retrofit:retrofit:1.9.0",
+                    "rxandroid"               : "io.reactivex:rxandroid:1.0.1",
+                    "rxjava"                  : "io.reactivex:rxjava:1.0.14",
+                    "okhttp-urlconnection"    : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+                    "okhttp"                  : "com.squareup.okhttp:okhttp:2.5.0",
+                    "okio"                    : "com.squareup.okio:okio:1.6.0",
+
+                    "butterknife"             : "com.jakewharton:butterknife:7.0.1",
+                    "nineoldandroids"         : "com.nineoldandroids:library:2.4.0",
+                    "otto"                    : "com.squareup:otto:1.3.8",
+                    "picasso"                 : "com.squareup.picasso:picasso:2.5.2",
+                    "glide"                   : "com.github.bumptech.glide:glide:3.6.1",
+                    "glide-okhttp-integration": "com.github.bumptech.glide:okhttp-integration:1.3.1@aar",
+                    "glide-transformations"   : "jp.wasabeef:glide-transformations:1.3.1",
+                    "glide-gpuimage-library"  : "jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0",
+
+                    "avoscloud-sdk"           : "cn.leancloud.android:avoscloud-sdk:v3.+",
+                    "avoscloud-push"          : "cn.leancloud.android:avoscloud-push:v3.+@aar",
+                    "avoscloud-Java-WebSocket": "cn.leancloud.android:Java-WebSocket:1.2.0-leancloud",
+                    "umeng-analytics"         : "com.umeng.analytics:analytics:latest.integration",
+
+                    "circleimageview"         : "de.hdodenhof:circleimageview:2.0.0",
+                    "weak-handler"            : "com.badoo.mobile:android-weak-handler:1.1",
+                    "logger"                  : "com.orhanobut:logger:1.4",
+                    "litepal"                 : "org.litepal.android:core:1.2.1",
+                    "ZDepthShadowLayout"      : "com.github.ShogoMizumoto:ZDepthShadowLayout:1.0.4",
+                    "materialish-progress"    : "com.pnikosis:materialish-progress:1.2",
+                    "flowlayout"              : "org.apmem.tools:layouts:1.8",
+                    "materialedittext"        : "com.rengwuxian.materialedittext:library:1.8.2",
+                    "bga-badgeview"           : "cn.bingoogolapple:bga-badgeview:1.0.2@aar",
+                    "kotterknife"             : "com.jakewharton:kotterknife:0.1.0-SNAPSHOT",
+                    "discrete-seekbar"        : "org.adw.library:discrete-seekbar:1.0.0",
+
+                    "objectify"               : "bz.tsung.android:objectify:1.1.0",
+                    "hawk"                    : "com.github.orhanobut:hawk:1.20",
+                    "smooth-app-bar-layout"   : "me.henrytao:smooth-app-bar-layout:0.2.1",
+                    "httpcore"                : "org.apache.httpcomponents:httpcore:4.3.2",
+                    "slidinguppanel"          : "com.sothree.slidinguppanel:library:3.2.0",
+                    "heartlayout"             : "tyrant:heartlayout:1.0.1",
+                    "rippleeffect"            : "com.github.traex.rippleeffect:library:1.2.3"]
+}
