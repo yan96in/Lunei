@@ -6,4 +6,6 @@ package me.drakeet.lunei;
  */
 public class AppConfig {
     public static int PAGE_COUNT = 4;
+    public static String APP_KEY = "";
+    public static String APP_SECRET = "";
 }
