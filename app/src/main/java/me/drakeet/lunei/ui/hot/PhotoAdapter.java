@@ -1,7 +1,6 @@
 package me.drakeet.lunei.ui.hot;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,9 +55,6 @@ public class PhotoAdapter
             super(itemView);
             context = itemView.getContext();
             ButterKnife.bind(this, itemView);
-            Typeface type = Typeface.createFromAsset(context.getAssets(),
-                    "fonts/ProximaRegular.otf");
-            likeCount.setTypeface(type);
         }
     }
 }
