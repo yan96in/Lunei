@@ -2,7 +2,6 @@ package me.drakeet.lunei.ui;
 
 import android.os.Bundle;
 import com.umeng.analytics.MobclickAgent;
-import me.drakeet.lunei.R;
 import me.drakeet.lunei.common.BaseActivity;
 import me.drakeet.lunei.data.User;
 import me.drakeet.lunei.ui.login.LoginActivity;
@@ -15,8 +14,8 @@ public class SplashActivity extends BaseActivity {
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
         checkLogin();
+        //setContentView(R.layout.activity_splash);
     }
 
 
