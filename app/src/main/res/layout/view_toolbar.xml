@@ -7,6 +7,8 @@
     toolbar:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="8dp"
     android:background="?attr/colorPrimary"
     android:elevation="0dp"
     android:translationZ="0dp"

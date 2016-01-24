@@ -11,4 +11,12 @@
         <item name="android:windowBackground">@color/colorSecond</item>
     </style>
 
+    <style name="ButtonPrimary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorSecond</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
 </resources>
