@@ -3,7 +3,7 @@ package me.drakeet.lunei;
 import android.app.Application;
 import com.avos.avoscloud.AVOSCloud;
 
-import static me.drakeet.lunei.AppConfig.*;
+import static me.drakeet.lunei.Keys.*;
 
 /**
  * Created by drakeet(http://drakeet.me)

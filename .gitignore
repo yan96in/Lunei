@@ -37,3 +37,4 @@ build/
 
 *.keystore
 AppConfig.java
+Keys.java

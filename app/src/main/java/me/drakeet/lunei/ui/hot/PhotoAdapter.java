@@ -1,10 +1,13 @@
 package me.drakeet.lunei.ui.hot;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 import java.util.List;
 import me.drakeet.lunei.R;
@@ -46,12 +49,16 @@ public class PhotoAdapter
     class ViewHolder extends RecyclerView.ViewHolder {
 
         Context context;
+        @Bind(R.id.likeCount) TextView likeCount;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
             context = itemView.getContext();
             ButterKnife.bind(this, itemView);
+            Typeface type = Typeface.createFromAsset(context.getAssets(),
+                    "fonts/ProximaRegular.otf");
+            likeCount.setTypeface(type);
         }
     }
 }
