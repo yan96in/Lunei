@@ -1,9 +1,9 @@
 package me.drakeet.lunei.ui.login;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
@@ -28,18 +28,16 @@ public class LoginActivity extends ProgressBarBaseActivity {
     // UI references.
     @Bind(R.id.user_name) AutoCompleteTextView mUserNameView;
     @Bind(R.id.password) EditText mPasswordView;
-    @Bind(R.id.toolbar) Toolbar mToolbar;
     Loader mLoader;
 
 
-    @Override public View provideToolbar() {
-        return mToolbar;
+    @Override protected int provideContentViewId() {
+        return R.layout.activity_login;
     }
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         mLoader = new Loader(this);
         populateAutoComplete();
@@ -51,7 +49,6 @@ public class LoginActivity extends ProgressBarBaseActivity {
             }
             return false;
         });
-        setSupportActionBar(mToolbar);
     }
 
 
@@ -64,7 +61,7 @@ public class LoginActivity extends ProgressBarBaseActivity {
     }
 
 
-    @OnClick(R.id.sign_in_button) void attemptLogin() {
+    @OnClick(R.id.login_in_button) void attemptLogin() {
         mUserNameView.setError(null);
         mPasswordView.setError(null);
         boolean cancel = false;
@@ -94,12 +91,12 @@ public class LoginActivity extends ProgressBarBaseActivity {
             focusView.requestFocus();
         } else {
             showProgress(true);
-            login(userName, password);
+            next(userName, password);
         }
     }
 
 
-    private void login(String userName, String password) {
+    protected void next(String userName, String password) {
         User.logInInBackground(userName, password, (user, e) -> {
             if (e == null) {
                 startActivity(MainActivity.class);
@@ -116,7 +113,7 @@ public class LoginActivity extends ProgressBarBaseActivity {
     }
 
 
-    private boolean isPasswordValid(String password) {
+    protected boolean isPasswordValid(String password) {
         return password.length() > 4;
     }
 
@@ -132,6 +129,15 @@ public class LoginActivity extends ProgressBarBaseActivity {
     @Override public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_login, menu);
         return true;
+    }
+
+
+    @Override public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_sign_up) {
+            startActivity(SignUpActivity.class);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 

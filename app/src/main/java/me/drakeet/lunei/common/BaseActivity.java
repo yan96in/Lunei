@@ -29,9 +29,6 @@ public class BaseActivity extends AppCompatActivity {
         mDialog.setIndeterminate(true);
         mDialog.setMessage("请稍候...");
         mDialog.setCanceledOnTouchOutside(false);
-        if (canBack() && getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
     }
 
 
@@ -69,9 +66,6 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
-    public boolean canBack() {
-        return false;
-    }
 
 
     @Override public boolean onKeyDown(int keyCode, KeyEvent event) {

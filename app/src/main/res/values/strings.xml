@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Lunei</string>
     <string name="title_activity_login">Log In</string>
+    <string name="title_activity_sign_up">Sign Up</string>
 
     <!-- Strings related to login -->
     <string name="prompt_user_name">UserName</string>
@@ -15,5 +16,7 @@
 
     <string name="double_click_to_exit">Double click to exit</string>
     <string name="sign_up">Sign up</string>
+    <string name="prompt_re_password">Password again</string>
+    <string name="sign_up_successful">Sign up successful</string>
 
 </resources>

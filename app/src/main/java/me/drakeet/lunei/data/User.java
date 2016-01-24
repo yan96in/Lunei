@@ -5,7 +5,9 @@ import com.avos.avoscloud.AVClassName;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.LogInCallback;
+import com.avos.avoscloud.SignUpCallback;
 import me.drakeet.lunei.callable.OnLogInCallback;
+import me.drakeet.lunei.callable.OnSignUpCallback;
 
 /**
  * Created by drakeet(http://drakeet.me)
@@ -86,5 +88,14 @@ import me.drakeet.lunei.callable.OnLogInCallback;
                 callback.done(user, e);
             }
         }, User.class);
+    }
+
+
+    public void signUpInBackground(OnSignUpCallback callback) {
+        signUpInBackground(new SignUpCallback() {
+            @Override public void done(AVException e) {
+                callback.done(e);
+            }
+        });
     }
 }

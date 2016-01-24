@@ -13,7 +13,7 @@ import me.drakeet.lunei.R;
  * Created by drakeet(http://drakeet.me)
  * Date: 16/1/24 16:20
  */
-public abstract class ProgressBarBaseActivity extends TitleBarActivity {
+public abstract class ProgressBarBaseActivity extends ToolbarActivity {
 
     public View mProgressView;
     private boolean isShowing;
