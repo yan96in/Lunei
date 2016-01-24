@@ -36,5 +36,4 @@ build/
 .DS_Store
 
 *.keystore
-AppConfig.java
 Keys.java

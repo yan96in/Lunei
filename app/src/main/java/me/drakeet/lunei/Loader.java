@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import bz.tsung.android.objectify.NoSuchPreferenceFoundException;
 import bz.tsung.android.objectify.ObjectPreferenceLoader;
-import me.drakeet.lunei.data.User;
 
 /**
  * Created by drakeet(http://drakeet.me)
