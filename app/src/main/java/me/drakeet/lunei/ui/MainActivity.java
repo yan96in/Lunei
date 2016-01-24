@@ -1,15 +1,17 @@
 package me.drakeet.lunei.ui;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
+import android.view.Menu;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.drakeet.lunei.R;
+import me.drakeet.lunei.common.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Bind(R.id.toolbar) Toolbar mToolbar;
     @Bind(R.id.tabLayout) TabLayout mTabLayout;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         initTabLayout();
     }
 
+
     private void initViewPager() {
         mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
@@ -36,5 +39,22 @@ public class MainActivity extends AppCompatActivity {
 
     private void initTabLayout() {
         mTabLayout.setupWithViewPager(mViewPager);
+    }
+
+
+    @Override public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+
+    @Override public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_BACK:
+                doesDoubleClickExit();
+                return true;
+            default:
+                return super.onKeyDown(keyCode, event);
+        }
     }
 }
