@@ -2,7 +2,10 @@ package me.drakeet.lunei.data;
 
 import android.os.Parcel;
 import com.avos.avoscloud.AVClassName;
+import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.LogInCallback;
+import me.drakeet.lunei.callable.OnLogInCallback;
 
 /**
  * Created by drakeet(http://drakeet.me)
@@ -74,5 +77,14 @@ import com.avos.avoscloud.AVUser;
 
     public String getInstallationId() {
         return getString("installationId");
+    }
+
+
+    public static void logInInBackground(String username, String password, OnLogInCallback callback) {
+        logInInBackground(username, password, new LogInCallback<User>() {
+            @Override public void done(User user, AVException e) {
+                callback.done(user, e);
+            }
+        }, User.class);
     }
 }
