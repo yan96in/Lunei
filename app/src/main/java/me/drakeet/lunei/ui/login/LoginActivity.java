@@ -21,7 +21,7 @@ import me.drakeet.lunei.ui.ProgressBarBaseActivity;
 import me.drakeet.lunei.util.ToastUtils;
 
 /**
- * A login screen that offers login via email/password.
+ * A login screen that offers login via username/password.
  */
 public class LoginActivity extends ProgressBarBaseActivity {
 
