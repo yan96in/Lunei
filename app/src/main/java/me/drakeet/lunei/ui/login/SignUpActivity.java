@@ -12,7 +12,8 @@ import me.drakeet.lunei.data.User;
 import me.drakeet.lunei.util.ToastUtils;
 
 /**
- * A login screen that offers login via email/password.
+ * Created by drakeet(http://drakeet.me)
+ * Date: 16/1/25 19:20
  */
 public class SignUpActivity extends LoginActivity {
 
